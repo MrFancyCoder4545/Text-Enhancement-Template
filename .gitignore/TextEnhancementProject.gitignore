@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<!-- Office 365 Servers Do Not Support Buttons or Client-Side Scripts -->
+<html>
+<head>
+<title>Template:Assignment Color Enhancement</title>
+<style>
+#ColorAnim_CoarseRainbow {
+color:red;
+animation:CoarseRainbow 7.5s infinite;
+}
+@keyframes CoarseRainbow {
+10% {color:orange;}
+20% {color:yellow;}
+30% {color:greenyellow;}
+40% {color:cornflowerblue;}
+50% {color:purple;}
+60% {color:red;}
+70% {color:orange;}
+75% {color:yellow;}
+80% {color:greenyellow;}
+90% {color:cornflowerblue;}
+100% {color:purple;}
+}
+#ColorAnimFlashingRed {
+    color:red;
+    -webkit-animation:FlashingRed 0.35s infinite;
+    -webkit-animation-play-state:paused;
+}
+@-webkit-keyframes FlashingRed {
+    25% {color:black;}
+    75% {color:red;}
+}
+#ColorAnim_GhostText {
+    color:white;
+    animation:GhostText 3s infinite;
+}
+@keyframes GhostText {
+    25% {
+        color:black;
+    }
+    75% {
+        color:white;
+        }
+}
+#ColorAnim_FlashingBlue {
+    color:rgba(40, 40, 255 1.0);
+    animation:FlashingBlue 0.35s infinite;
+}
+@keyframes FlashingBlue {
+    25% {color:black;}
+    75% {color:rgba(40, 40, 255, 1.0);}
+}
+</style>
+<script>
+    function PlaySwitch1() {
+        document.getElementById("ColorAnimFlashingRed").style.WebkitAnimationPlayState = "running";
+    }
+    function KillSwitch1() {
+        document.getElementById("ColorAnimFlashingRed").style.WebkitAnimationPlayState = "paused";
+    }
+</script>
+</head>
+<div>
+<button onclick="KillSwitch1()">Animation Kill Switch</button>
+<button onclick="PlaySwitch1()">Animation Play Switch</button>
+<br><br>
+<body id="ColorAnimFlashingRed">
+Janice Lam is my favorite sister.
+<!-- Insert Text Here -->
+<br><br>
+</body>
+</div>
+</html>
